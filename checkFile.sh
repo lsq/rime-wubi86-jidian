@@ -10,6 +10,9 @@ for i in "${files[@]}"; do
     if [ -e "../rime-ice/$i" ]; then
         echo "存在--$i"
         # pwsh -command "cp $i ../rime-ice/ && echo --$i copyed!"
+        if [[ $i == "default.custom.yaml" ]]; then
+            continue
+        fi
         cp -pu "$i" ../rime-ice/
         # echo "cp $i"
     else
@@ -23,3 +26,5 @@ for i in "${files[@]}"; do
         fi
     fi
 done
+
+[ -d ./lua ] && cp -rf ./lua ../rime-ice
