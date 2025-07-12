@@ -12,31 +12,33 @@ patch:
   show_notifications_time: 200            # 部署通知、中英切换标识  显示时长 ms
   style:
     inline_preedit: true
-    color_scheme: MacRoseo                 # 匹配正文的颜色方案，对应正文的颜色方案名
+    color_scheme: purity_lsq              # 匹配正文的颜色方案，对应正文的颜色方案名
     display_tray_icon: false
-    horizontal: true                        # 横向排列候选
-    font_point: 13                          # 候选词 字号
-    font_face: "Microsoft Yahei"            # 字体 - 候选文字 例子： "Microsoft Yahei:12:15:bold"
-    label_font_face: "Microsoft Yahei"     # string    序号字体 标注
-    label_font_point: 12                   # number    序号字体 大小
-    comment_font_face: "Microsoft Yahei"   # string    注释字体
-    comment_font_point: 11                 # number    注释字体 大小
-    text_orientation: horizontal                         # horizontal | vertical
-    preedit_type: "composition"            #  "composition" | "preview" | "preview_all"
+    horizontal: true                      # 横向排列候选
+    font_point: 13                        # 候选词 字号
+    font_face: "consolaslxgw"             # 字体 - 候选文字 例子： "Microsoft Yahei:12:15:bold"
+    label_format: "%s."
+    label_font_face: "consolaslxgw"       # string    序号字体 标注
+    label_font_point: 11                  # number    序号字体 大小
+    comment_font_face: "consolaslxgw"     # string    注释字体
+    comment_font_point: 13                # number    注释字体 大小
+    text_orientation: horizontal          # horizontal | vertical
+    preedit_type: "composition"           #  "composition" | "preview" | "preview_all"
+    click_to_capture: true
 
     layout:
       align_type: "bottom"        # string  "top" | "center" | "bottom" 序号、候选词、注释纵向对齐方式
       corner_radius: 3            # number  圆角大小 候选面板
       enhanced_position: false    # bool 允许光标位置获取失败时，在当空窗口左上角绘制候选框（而不是桌面左上角）
-      shadow_radius: 3
+      shadow_radius: 4
       shadow_offset_x: 2          # number 阴影横向偏移量
       shadow_offset_y: 2          # number 阴影纵向偏移量
       border_width: 1             # number 边框宽度 候选边框、面板边框
-      candidate_spacing: 10       # number 候选之间的间隔
-      hilite_spacing: 3           # number 序号与候选词之间的间隔 宽度
-      hilite_padding: 0           # number 候选词边界值 宽度
-      margin_x: 9                 # number 内容离边框的，左右边界  当 margin_x 和 margin_y 设置为负值时，将不显示候选窗口，但不影响方案选择
-      margin_y: 5                 # number 内容离边框的，上下边界  当 margin_x 和 margin_y 设置为负值时，将不显示候选窗口，但不影响方案选择
+      candidate_spacing: 5        # number 候选之间的间隔
+      hilite_spacing: 2           # number 序号与候选词之间的间隔 宽度
+      hilite_padding: 6           # number 候选词边界值 宽度
+      margin_x: 4                 # number 内容离边框的，左右边界  当 margin_x 和 margin_y 设置为负值时，将不显示候选窗口，但不影响方案选择
+      margin_y: 4                 # number 内容离边框的，上下边界  当 margin_x 和 margin_y 设置为负值时，将不显示候选窗口，但不影响方案选择
 
   preset_color_schemes:   # 主题：颜色方案
     MacRoseo: # 玫红字体
@@ -98,5 +100,24 @@ patch:
       hilited_candidate_back_color: 0x9BAD23
       candidate_text_color: 0x000000
       comment_text_color: 0xBBCC27
+      
+    purity_lsq:
+      name: "純粹的形式／Purity of Form Custom"
+      author: 雨過之後、佛振
+      color_format: rgba
+      text_color: 0x808080
+      back_color: 0xECEFF4
+      shadow_color: 0x000000b4 # 阴影
+      label_color: 0xBBBBBB
+      border_color: 0x545554
+      comment_text_color: 0x36CC1D
+      candidate_text_color: 0x7E4848
+      # candidate_shadow_color: 0x000000b4 # 阴影
+      hilited_comment_text_color: 0xFF9292
+      hilited_candidate_back_color: 0x5244A9
+      hilited_candidate_border_color: 0x5244A9 # 边框
+      hilited_candidate_label_color: 0xFFFFFF
+      hilited_candidate_text_color: 0xFFFFFF
+      hilited_candidate_shadow_color: 0x000000b4 # 阴影
 
   style/layout/border_width: 1
