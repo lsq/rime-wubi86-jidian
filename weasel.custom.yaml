@@ -80,8 +80,8 @@ patch:
       back_color: 0xFFFFFF
       border_color: 0xD6D6D6
       text_color: 0x000000
-      hilited_text_color: 0x000000
-      hilited_back_color: 0xFFFFFF
+      hilited_text_color: 0x000000              # 颜色 - 输入中 - 编码
+      hilited_back_color: 0xFFFFFF              # 颜色 - 输入中 - 背景
       hilited_candidate_text_color: 0xFFFFFF
       hilited_candidate_back_color: 0x4F11FA
       candidate_text_color: 0x000000
@@ -110,14 +110,14 @@ patch:
       shadow_color: 0x000000b4 # 阴影
       label_color: 0xBBBBBB
       border_color: 0x545554
-      comment_text_color: 0x36CC1D
-      candidate_text_color: 0x7E4848
-      # candidate_shadow_color: 0x000000b4 # 阴影
-      hilited_comment_text_color: 0xFF9292
-      hilited_candidate_back_color: 0x5244A9
+      comment_text_color: 0x36CC1D            # 颜色 - 其它候选词 - 提示编码
+      candidate_text_color: 0x7E4848          # 颜色 - 其它候选词 - 文字
+      # candidate_shadow_color: 0x000000b4    # 阴影
+      hilited_comment_text_color: 0xFF9292    # 颜色 - 首选候选词 - 提示编码
+      hilited_candidate_back_color: 0x5244A9  # 颜色 - 首选候选词 - 背景  8位的前两位是颜色透明度，00就是透明，FF就是不透明
       hilited_candidate_border_color: 0x5244A9 # 边框
-      hilited_candidate_label_color: 0xFFFFFF
-      hilited_candidate_text_color: 0xFFFFFF
+      hilited_candidate_label_color: 0xFFFFFF # 颜色 - 首选候选词 - 序号
+      hilited_candidate_text_color: 0xFFFFFF  # 颜色 - 首选候选词 - 文字
       hilited_candidate_shadow_color: 0x000000b4 # 阴影
 
   style/layout/border_width: 1
